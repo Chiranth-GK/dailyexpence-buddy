@@ -10,6 +10,7 @@ import AddExpenseForm from "@/components/AddExpenseForm";
 import CategoryChart from "@/components/CategoryChart";
 import MonthlyChart from "@/components/MonthlyChart";
 import TransactionList from "@/components/TransactionList";
+import ExpenseChat from "@/components/ExpenseChat";
 
 const Index = () => {
   const { user, signOut } = useAuth();
@@ -83,6 +84,7 @@ const Index = () => {
 
         {loading && <p className="text-center text-muted-foreground text-sm">Loading...</p>}
       </div>
+      <ExpenseChat expenses={expenses} />
     </div>
   );
 };
